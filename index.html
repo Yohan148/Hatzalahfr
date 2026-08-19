@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>United Hatzalah France | Sauver des vies en 90 secondes</title>
+  <meta name="description" content="United Hatzalah intervient en 90 secondes pour sauver des vies en Israël. Découvrez notre impact, nos moyens d’intervention et soutenez nos secouristes par votre don." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo-hatzalah.png" alt="Logo United Hatzalah" class="brand-logo">
+        <div class="brand-text">
+          <small>United Hatzalah France</small>
+          <strong>Sauver des vies en 90 secondes</strong>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="is-active">Accueil</a>
+        <a href="interventions.html">Nos moyens d'intervention</a>
+        <a href="impact.html">Notre impact</a>
+        <a href="apropos.html">À propos</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="don.html" class="btn btn-primary">Faire un don</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <style>
+      .hero-home-full {
+        position: relative;
+        min-height: calc(100vh - 88px);
+        overflow: hidden;
+        background: #020617;
+        color: white;
+      }
+
+      .hero-home-full .hero-bg {
+        position: absolute;
+        inset: 0;
+      }
+
+      .hero-home-full .hero-bg img,
+      .hero-home-full .hero-bg video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-home-full .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(2,6,23,0.88) 0%, rgba(2,6,23,0.76) 35%, rgba(2,6,23,0.45) 62%, rgba(2,6,23,0.18) 100%);
+      }
+
+      .hero-home-full .hero-inner {
+        position: relative;
+        z-index: 2;
+        min-height: calc(100vh - 88px);
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-home-full .hero-copy {
+        max-width: 760px;
+        padding: 80px 0;
+      }
+
+      .hero-home-full .hero-kicker {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.72);
+      }
+
+      .hero-home-full h1 {
+        margin-top: 18px;
+        font-size: clamp(48px, 7vw, 92px);
+        line-height: 0.98;
+        letter-spacing: -0.05em;
+        font-weight: 900;
+        max-width: 900px;
+      }
+
+      .hero-home-full h1 span {
+        color: #fb923c;
+      }
+
+      .hero-home-full p {
+        margin-top: 28px;
+        max-width: 680px;
+        font-size: 21px;
+        line-height: 1.9;
+        color: rgba(255,255,255,0.84);
+      }
+
+      .hero-home-full .hero-actions {
+        margin-top: 34px;
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .hero-home-full .hero-meta {
+        margin-top: 28px;
+        font-size: 15px;
+        font-weight: 600;
+        color: rgba(255,255,255,0.72);
+      }
+
+      @media (max-width: 760px) {
+        .hero-home-full,
+        .hero-home-full .hero-inner {
+          min-height: auto;
+        }
+
+        .hero-home-full .hero-copy {
+          padding: 92px 0 56px;
+        }
+
+        .hero-home-full h1 {
+          font-size: clamp(42px, 13vw, 64px);
+          line-height: 1.02;
+        }
+
+        .hero-home-full p {
+          font-size: 17px;
+          line-height: 1.8;
+        }
+
+        .hero-home-full .hero-actions {
+          flex-direction: column;
+        }
+      }
+    </style>
+
+    <section class="hero-home-full">
+      <div class="hero-bg">
+        <img src="assets/hero-home.gif" alt="Intervention United Hatzalah">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="hero-kicker">United Hatzalah France</span>
+          <h1>Ils arrivent en <span>90 secondes</span> quand une vie bascule.</h1>
+          <p>
+            Chaque jour en Israël, les secouristes de United Hatzalah partent immédiatement pour apporter les premiers soins, stabiliser les blessés et sauver des vies. Votre don permet à cette chaîne de secours unique de continuer à agir sans attendre.
+          </p>
+          <div class="hero-actions">
+            <a href="don.html" class="btn btn-primary">Faire un don</a>
+            <a href="impact.html" class="btn btn-outline-light">Découvrir notre impact</a>
+          </div>
+          <div class="hero-meta">8 000 bénévoles · 7 millions d’interventions · disponible 24h/24</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-4">
+          <article class="stat-card">
+            <div class="stat-number">90 sec</div>
+            <p class="stat-label">pour intervenir dans les grandes villes et commencer les premiers soins au plus vite.</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-number">8 000</div>
+            <p class="stat-label">bénévoles mobilisés et formés pour répondre aux urgences partout en Israël.</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-number">24h/24</div>
+            <p class="stat-label">de disponibilité sur le terrain, de jour comme de nuit, même en situation de crise.</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-number">7M+</div>
+            <p class="stat-label">interventions réalisées pour secourir, stabiliser et sauver des vies.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Pourquoi soutenir United Hatzalah</span>
+          <h2 class="section-title">Votre don devient un geste concret, visible et vital.</h2>
+          <p class="section-description">
+            Derrière chaque intervention, il y a des véhicules, du matériel, une logistique, des bénévoles formés et une capacité d’action immédiate.
+            Soutenir United Hatzalah, c’est financer une réponse d’urgence qui sauve des vies chaque jour.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-body">
+              <h3 class="project-title">Une rapidité unique</h3>
+              <p class="project-description">
+                Dans une urgence, chaque seconde compte. Notre modèle permet une arrivée ultra-rapide sur place pour apporter les premiers soins sans attendre.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 class="project-title">Des moyens concrets</h3>
+              <p class="project-description">
+                Ambulances, moto-ambulances, véhicules d’intervention, oxygène, défibrillateurs, sacs médicaux : votre don finance l’action réelle sur le terrain.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 class="project-title">Une mission de vie</h3>
+              <p class="project-description">
+                Les équipes de United Hatzalah interviennent dans des contextes parfois extrêmes pour stabiliser, rassurer et sauver, là où chaque seconde change tout.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projets-home">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Des projets à financer</span>
+          <h2 class="section-title">Chaque donateur peut soutenir un moyen d’intervention concret.</h2>
+          <p class="section-description">
+            Nous vous proposons des projets forts, visibles et immédiatement compréhensibles, pour que votre soutien ait un impact clair et mesurable.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card project-card">
+            <div class="project-media">
+              <img src="assets/moto-ambulance.png" alt="Moto-ambulance Hatzalah">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Moto-ambulance</h3>
+              <p class="project-description">
+                Le véhicule d’intervention ultra-rapide pour arriver en quelques secondes au cœur du trafic et commencer immédiatement les premiers soins.
+              </p>
+              <a href="don.html" class="btn btn-secondary">Découvrir</a>
+            </div>
+          </article>
+
+          <article class="card project-card is-featured">
+            <div class="project-media">
+              <img src="assets/auto-ambulance.png" alt="Auto-ambulance Hatzalah">
+            </div>
+            <div class="project-content">
+              <span class="badge-featured">Projet phare</span>
+              <h3 class="project-title">Auto-ambulance</h3>
+              <p class="project-description">
+                Un véhicule médical léger permettant aux secouristes d’arriver vite avec tout le matériel nécessaire pour agir efficacement.
+              </p>
+              <a href="don.html" class="btn btn-primary">Financer une Auto-ambulance</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-media">
+              <img src="assets/ambulance.png" alt="Ambulance Hatzalah">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Ambulance</h3>
+              <p class="project-description">
+                Un véhicule essentiel pour stabiliser, traiter et transporter les blessés. Un projet puissant et très parlant pour les donateurs.
+              </p>
+              <a href="don.html" class="btn btn-secondary">Découvrir</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-media">
+              <img src="assets/sac-defi.png" alt="Équipement médical Hatzalah">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Équipement médical</h3>
+              <p class="project-description">
+                Défibrillateurs, oxygène, sacs de secours, matériel de stabilisation : tout ce qui permet de sauver une vie dès les premières minutes.
+              </p>
+              <a href="don.html" class="btn btn-secondary">Soutenir l’équipement</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2" style="align-items: center;">
+        <div>
+          <div class="section-head section-head--left">
+            <span class="eyebrow">Voir l’urgence de l’intérieur</span>
+            <h2 class="section-title">Sur le terrain, chaque seconde compte vraiment.</h2>
+            <p class="section-description">
+              Derrière chaque appel, il y a une course contre le temps. Les équipes de United Hatzalah interviennent au plus vite pour atteindre la victime, commencer les premiers soins et faire la différence avant même l’arrivée des secours lourds.
+            </p>
+          </div>
+
+          <div class="button-row">
+            <a href="don.html" class="btn btn-primary">Soutenir une intervention</a>
+            <a href="interventions.html" class="btn btn-outline">Voir nos moyens d’intervention</a>
+          </div>
+        </div>
+
+        <div class="media-block">
+         <div class="video-wrapper">
+    <video controls playsinline preload="metadata" poster="assets/video-cover.png">
+      <source src="assets/hatzalah-video.mp4" type="video/mp4">
+      Votre navigateur ne prend pas en charge la lecture vidéo.
+    </video>
+  </div>
+</div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container grid-2" style="align-items: start;">
+        <div>
+          <div class="section-head section-head--left">
+            <span class="eyebrow">Pourquoi donner maintenant</span>
+            <h2 class="section-title">Les besoins explosent, les interventions continuent sans relâche.</h2>
+            <p class="section-description">
+              En période de guerre, de tension et d’urgence permanente, les équipes de United Hatzalah doivent pouvoir intervenir immédiatement,
+              avec les bons véhicules, les bons équipements et les bons moyens humains.
+            </p>
+          </div>
+
+          <ul class="list-check">
+            <li><span>Des secouristes formés prêts à partir immédiatement à toute heure.</span></li>
+            <li><span>Des interventions partout en Israël, y compris dans des contextes complexes et à haut risque.</span></li>
+            <li><span>Des besoins constants en équipements médicaux, véhicules, matériel de protection et logistique.</span></li>
+            <li><span>Un modèle d’intervention qui sauve des vies parce qu’il gagne un temps décisif.</span></li>
+          </ul>
+        </div>
+
+        <article class="testimonial-card">
+          <small>Témoignage</small>
+          <h3 class="testimonial-title">“Quand tout a basculé, ils étaient déjà là.”</h3>
+          <p class="testimonial-text">
+            Lorsqu’une urgence frappe, chaque seconde compte. Les équipes de United Hatzalah n’attendent pas. Elles partent immédiatement pour stabiliser,
+            rassurer et sauver. Pour les familles, cette rapidité change tout.
+          </p>
+
+          <div class="quote-box">
+            <small>Message clé</small>
+            <strong>Quand l’ambulance n’est pas encore là, eux sont déjà en route.</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <article class="card">
+          <div class="card-body">
+            <span class="eyebrow">Fiscalité France</span>
+            <h2 class="section-title" style="font-size: clamp(32px, 4vw, 46px);">Votre don vous coûte moins que vous ne le pensez.</h2>
+            <p class="section-description">
+              En France, votre soutien peut bénéficier d’un avantage fiscal important. Le coût réel de votre don est donc bien inférieur au montant versé.
+            </p>
+
+            <div class="list-check" style="margin-top: 24px;">
+              <li><span>Un don de 100 € ne vous coûte réellement que 34 € après déduction fiscale.</span></li>
+              <li><span>Un don de 500 € ne vous coûte réellement que 170 €.</span></li>
+              <li><span>Un don de 1 000 € ne vous coûte réellement que 340 €.</span></li>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card" style="background: #f97316; color: white;">
+          <small style="color: rgba(255,255,255,0.8);">Don IFI</small>
+          <h3 class="testimonial-title">Réduisez jusqu’à 75% de votre IFI.</h3>
+          <p class="testimonial-text" style="color: rgba(255,255,255,0.88);">
+            Pour les personnes concernées par l’IFI, votre soutien à United Hatzalah peut s’inscrire dans une démarche philanthropique forte,
+            utile et fiscalement avantageuse.
+          </p>
+
+          <div class="button-row" style="margin-top: 28px;">
+            <a href="don.html" class="btn btn-white">Je fais un don IFI</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container section-head">
+        <span class="eyebrow eyebrow-dark">Ils sont prêts à partir en 90 secondes</span>
+        <h2 class="section-title">Aidez-les à continuer à sauver des vies.</h2>
+        <p class="section-description">
+          Votre don soutient directement les secouristes, les équipements et les interventions de United Hatzalah partout en Israël.
+        </p>
+
+        <div class="button-row" style="justify-content: center; margin-top: 30px;">
+          <a href="don.html" class="btn btn-primary">Je sauve des vies</a>
+          <a href="contact.html" class="btn btn-outline-light">Être rappelé</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <img src="assets/logo-hatzalah.png" alt="Logo United Hatzalah" class="brand-logo">
+            <div class="brand-text">
+              <small style="color: rgba(255,255,255,0.5);">United Hatzalah France</small>
+              <strong style="color: white;">Sauver des vies en 90 secondes</strong>
+            </div>
+          </a>
+          <p style="margin-top: 16px;">
+            United Hatzalah intervient en quelques secondes pour apporter les premiers soins et sauver des vies en Israël.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Accueil</a>
+            <a href="don.html">Faire un don</a>
+            <a href="interventions.html">Nos moyens d’intervention</a>
+            <a href="impact.html">Notre impact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <div class="footer-links">
+            <a href="apropos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+            <a href="don.html">Fiscalité</a>
+            <a href="contact.html">Être rappelé</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Agir maintenant</h4>
+          <p>Soutenez une action concrète et participez au financement des secours d’urgence.</p>
+          <div class="button-row" style="margin-top: 18px;">
+            <a href="don.html" class="btn btn-primary">Faire un don</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © United Hatzalah France — Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | United Hatzalah France</title>
+  <meta name="description" content="Retrouvez les actualités, interventions, publications et contenus réseaux sociaux de United Hatzalah France." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-hero {
+      background: linear-gradient(135deg, var(--color-secondary-deep), var(--color-secondary), var(--color-secondary-soft));
+      color: white;
+      padding: 84px 0 64px;
+    }
+
+    .blog-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 28px;
+    }
+
+    .blog-filter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--color-border);
+      background: white;
+      color: var(--color-text-soft);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .blog-filter.active {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: white;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .blog-card {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card-media {
+      height: 220px;
+      overflow: hidden;
+      background: var(--color-secondary-soft);
+    }
+
+    .blog-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .blog-card-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .blog-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 12px;
+    }
+
+    .blog-card h3 {
+      font-size: 26px;
+      line-height: 1.15;
+      font-weight: 900;
+      color: var(--color-text);
+    }
+
+    .blog-card p {
+      margin: 14px 0 22px;
+      color: var(--color-text-soft);
+      font-size: 16px;
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    .social-highlight {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .social-card {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .social-card-content {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .social-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+
+    .social-badge.facebook {
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+
+    .social-badge.instagram {
+      background: #fdf2f8;
+      color: #be185d;
+    }
+
+    .social-card h3 {
+      font-size: 28px;
+      line-height: 1.12;
+      font-weight: 900;
+      color: var(--color-text);
+    }
+
+    .social-card p {
+      margin: 14px 0 22px;
+      color: var(--color-text-soft);
+      font-size: 16px;
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    @media (max-width: 1024px) {
+      .blog-grid,
+      .social-highlight {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .blog-grid,
+      .social-highlight {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo-hatzalah.png" alt="Logo United Hatzalah" class="brand-logo">
+        <div class="brand-text">
+          <small>United Hatzalah France</small>
+          <strong>Sauver des vies en 90 secondes</strong>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="interventions.html">Nos moyens d’intervention</a>
+        <a href="impact.html">Notre impact</a>
+        <a href="apropos.html">À propos</a>
+        <a href="blog.html" class="is-active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="https://ton-lien-allodons.fr" class="btn btn-primary">Faire un don</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section section-dark">
+      <div class="container grid-2" style="align-items: center;">
+        <div>
+          <span class="eyebrow eyebrow-dark">À propos</span>
+          <h1 class="section-title">Une organisation née d’une conviction simple : dans une urgence, chaque seconde compte.</h1>
+          <p class="section-description">
+            United Hatzalah repose sur une idée forte : apporter les premiers soins le plus vite possible, grâce à un réseau de bénévoles formés, équipés et prêts à intervenir immédiatement. Notre mission est de permettre à cette chaîne de secours unique de continuer à sauver des vies chaque jour en Israël.
+          </p>
+          <div class="button-row" style="margin-top: 28px;">
+            <a href="https://ton-lien-allodons.fr" class="btn btn-primary">Soutenir notre mission</a>
+            <a href="impact.html" class="btn btn-outline-light">Découvrir notre impact</a>
+          </div>
+        </div>
+
+        <div class="media-block">
+          <img src="assets/apropos-hero.jpg" alt="United Hatzalah sur le terrain">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Notre mission</span>
+          <h2 class="section-title">Réduire le temps entre l’urgence et le premier geste qui peut sauver.</h2>
+          <p class="section-description">
+            United Hatzalah agit avec un objectif clair : être présent au plus vite auprès des victimes, apporter une réponse immédiate et permettre une prise en charge plus rapide, plus efficace et plus humaine dans les premières minutes d’une urgence.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-body">
+              <h3 class="project-title">Agir vite</h3>
+              <p class="project-description">
+                La vitesse d’intervention est au cœur du modèle. Chaque minute gagnée augmente les chances de stabilisation et de survie.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 class="project-title">Agir bien</h3>
+              <p class="project-description">
+                Les équipes disposent d’une formation, d’un matériel et d’une organisation conçus pour apporter une réponse concrète dès les premières minutes.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 class="project-title">Agir partout</h3>
+              <p class="project-description">
+                Grâce à une présence terrain forte, United Hatzalah peut intervenir dans un grand nombre de situations et de zones avec une capacité unique de réactivité.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container grid-2" style="align-items: center;">
+        <div>
+          <div class="section-head section-head--left">
+            <span class="eyebrow">Notre vision</span>
+            <h2 class="section-title">Créer une présence de secours immédiate là où l’attente peut coûter trop cher.</h2>
+            <p class="section-description">
+              United Hatzalah ne se limite pas à une logique de transport ou d’assistance classique. Sa vision repose sur une présence humaine, médicale et logistique capable d’arriver en quelques instants, au plus près de la victime, avant même que les secours lourds ne soient sur place.
+            </p>
+          </div>
+
+          <ul class="list-check">
+            <li><span>Permettre une prise en charge plus rapide sur le lieu même de l’urgence.</span></li>
+            <li><span>Renforcer la capacité des bénévoles à intervenir dans les premières minutes critiques.</span></li>
+            <li><span>Déployer une organisation de secours pensée pour la réactivité, la proximité et l’efficacité.</span></li>
+          </ul>
+        </div>
+
+        <div class="media-block">
+          <img src="assets/apropos-vision.jpg" alt="Vision United Hatzalah">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Direction internationale</span>
+          <h2 class="section-title">Une organisation portée par une gouvernance engagée.</h2>
+          <p class="section-description">
+            United Hatzalah s’appuie sur une direction internationale et israélienne engagée, qui porte la vision, le développement et la capacité opérationnelle de l’organisation sur le long terme.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-body">
+              <h3 class="project-title">Eli Beer</h3>
+              <p class="project-description"><strong>Fondateur et Président de United Hatzalah</strong><br><br>Il incarne la vision fondatrice de l’organisation : rendre possible une réponse médicale immédiate, accessible et capable de sauver des vies en quelques minutes seulement.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 class="project-title">Mike Brown</h3>
+              <p class="project-description"><strong>CEO International</strong><br><br>Il accompagne le développement international de l’organisation, le rayonnement de sa mission et la structuration de son soutien à l’échelle mondiale.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 class="project-title">Ehud Davidson</h3>
+              <p class="project-description"><strong>CEO Israel</strong><br><br>Il pilote l’organisation en Israël, avec un rôle central dans le déploiement opérationnel, la gestion des équipes et l’efficacité de la réponse terrain.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Équipe France</span>
+          <h2 class="section-title">Une équipe mobilisée pour faire grandir la mission en France.</h2>
+          <p class="section-description">
+            La branche française de United Hatzalah porte le développement, la visibilité, la relation donateurs et le soutien aux projets qui permettent à l’organisation d’agir concrètement sur le terrain en Israël.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card"><div class="card-body"><h3 class="project-title">Samuel Arrouas</h3><p class="project-description"><strong>CEO – Branche France</strong><br><br>Il pilote le développement de la branche française, sa stratégie de croissance, ses relations institutionnelles et la mobilisation de ses soutiens.</p></div></article>
+          <article class="card"><div class="card-body"><h3 class="project-title">Joelle Roche</h3><p class="project-description"><strong>Directrice adjointe France</strong><br><br>Elle accompagne la structuration et le fonctionnement de la branche française, en soutien aux actions de développement et d’organisation.</p></div></article>
+          <article class="card"><div class="card-body"><h3 class="project-title">Ryme Bettach</h3><p class="project-description"><strong>Directrice adjointe France</strong><br><br>Elle contribue à la coordination des projets, à la dynamique de l’équipe et au déploiement des actions menées en France.</p></div></article>
+          <article class="card"><div class="card-body"><h3 class="project-title">Rebecca Outmizguin</h3><p class="project-description"><strong>Assistante de direction</strong><br><br>Elle assure le suivi organisationnel, l’appui de direction et la coordination quotidienne nécessaire au bon fonctionnement de la structure.</p></div></article>
+          <article class="card"><div class="card-body"><h3 class="project-title">Odile Solnica</h3><p class="project-description"><strong>Chargée de relation donateur</strong><br><br>Elle accompagne les donateurs, répond à leurs demandes et veille à la qualité de la relation avec les soutiens de United Hatzalah France.</p></div></article>
+          <article class="card"><div class="card-body"><h3 class="project-title">Yohan Taieb</h3><p class="project-description"><strong>Chargé de projet</strong><br><br>Il contribue au développement des projets, à leur structuration et à la mise en œuvre d’actions permettant de renforcer la mission et sa visibilité.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2" style="align-items: start;">
+        <article class="testimonial-card">
+          <small>Notre engagement</small>
+          <h3 class="testimonial-title">Être prêt avant même que l’urgence ne survienne.</h3>
+          <p class="testimonial-text">
+            Derrière chaque intervention réussie, il y a des bénévoles formés, des moyens déployés, du matériel préparé, une organisation opérationnelle et une volonté constante d’être prêt, à toute heure, pour répondre immédiatement.
+          </p>
+          <div class="quote-box">
+            <small>Message clé</small>
+            <strong>Notre engagement est simple : tout mettre en œuvre pour qu’aucune minute précieuse ne soit perdue.</strong>
+          </div>
+        </article>
+
+        <div>
+          <div class="section-head section-head--left">
+            <span class="eyebrow">Notre rôle en France</span>
+            <h2 class="section-title">Mobiliser, soutenir et renforcer les moyens d’une mission vitale.</h2>
+            <p class="section-description">
+              United Hatzalah France a pour rôle de sensibiliser, mobiliser et collecter les ressources nécessaires pour permettre à cette organisation de secours de continuer à intervenir rapidement, efficacement et massivement sur le terrain en Israël.
+            </p>
+          </div>
+
+          <ul class="list-check">
+            <li><span>Faire connaître la mission et son utilité concrète.</span></li>
+            <li><span>Permettre le financement de véhicules, d’équipements et de projets vitaux.</span></li>
+            <li><span>Créer un lien fort entre les donateurs et une action de secours à impact réel.</span></li>
+            <li><span>Renforcer la communauté de soutien autour d’une organisation de terrain reconnue pour sa réactivité.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container section-head">
+        <span class="eyebrow eyebrow-dark">Agir maintenant</span>
+        <h2 class="section-title">Aidez-nous à faire vivre cette mission de secours.</h2>
+        <p class="section-description">
+          En soutenant United Hatzalah France, vous permettez à une organisation de terrain de continuer à agir vite, efficacement et sans attendre lorsque l’urgence frappe.
+        </p>
+        <div class="button-row" style="justify-content: center; margin-top: 30px;">
+          <a href="https://ton-lien-allodons.fr" class="btn btn-primary">Faire un don</a>
+          <a href="contact.html" class="btn btn-outline-light">Nous contacter</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <img src="assets/logo-hatzalah.png" alt="Logo United Hatzalah" class="brand-logo">
+            <div class="brand-text">
+              <small style="color: rgba(255,255,255,0.5);">United Hatzalah France</small>
+              <strong style="color: white;">Sauver des vies en 90 secondes</strong>
+            </div>
+          </a>
+          <p style="margin-top: 16px;">
+            United Hatzalah intervient en quelques secondes pour apporter les premiers soins et sauver des vies en Israël.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Accueil</a>
+            <a href="don.html">Faire un don</a>
+            <a href="interventions.html">Nos moyens d’intervention</a>
+            <a href="impact.html">Notre impact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <div class="footer-links">
+            <a href="apropos.html">À propos</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suivre United Hatzalah</h4>
+          <div class="button-row" style="margin-top: 8px;">
+            <a href="https://www.facebook.com/" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © United Hatzalah France — Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

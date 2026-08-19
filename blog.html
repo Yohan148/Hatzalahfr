@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | United Hatzalah France</title>
+  <meta name="description" content="Retrouvez les actualités, interventions, publications et contenus réseaux sociaux de United Hatzalah France." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-hero {
+      background: linear-gradient(135deg, var(--color-secondary-deep), var(--color-secondary), var(--color-secondary-soft));
+      color: white;
+      padding: 84px 0 64px;
+    }
+
+    .blog-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 28px;
+    }
+
+    .blog-filter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--color-border);
+      background: white;
+      color: var(--color-text-soft);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .blog-filter.active {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: white;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .blog-card {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card-media {
+      height: 220px;
+      overflow: hidden;
+      background: var(--color-secondary-soft);
+    }
+
+    .blog-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .blog-card-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .blog-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 12px;
+    }
+
+    .blog-card h3 {
+      font-size: 26px;
+      line-height: 1.15;
+      font-weight: 900;
+      color: var(--color-text);
+    }
+
+    .blog-card p {
+      margin: 14px 0 22px;
+      color: var(--color-text-soft);
+      font-size: 16px;
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    .social-highlight {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .social-card {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .social-card-content {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .social-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+
+    .social-badge.facebook {
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+
+    .social-badge.instagram {
+      background: #fdf2f8;
+      color: #be185d;
+    }
+
+    .social-card h3 {
+      font-size: 28px;
+      line-height: 1.12;
+      font-weight: 900;
+      color: var(--color-text);
+    }
+
+    .social-card p {
+      margin: 14px 0 22px;
+      color: var(--color-text-soft);
+      font-size: 16px;
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    @media (max-width: 1024px) {
+      .blog-grid,
+      .social-highlight {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .blog-grid,
+      .social-highlight {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo-hatzalah.png" alt="Logo United Hatzalah" class="brand-logo">
+        <div class="brand-text">
+          <small>United Hatzalah France</small>
+          <strong>Sauver des vies en 90 secondes</strong>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="interventions.html">Nos moyens d’intervention</a>
+        <a href="impact.html">Notre impact</a>
+        <a href="apropos.html">À propos</a>
+        <a href="blog.html" class="is-active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="https://ton-lien-allodons.fr" class="btn btn-primary">Faire un don</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <div class="section-head" style="margin-bottom: 0; max-width: 960px;">
+          <span class="eyebrow eyebrow-dark">Blog & actualités</span>
+          <h1 class="section-title">Retrouvez nos interventions, nos actualités et nos publications sur les réseaux sociaux.</h1>
+          <p class="section-description" style="color: rgba(255,255,255,0.82);">
+            Cette page vous permet de centraliser les articles, les nouvelles importantes, les interventions marquantes et les contenus publiés par United Hatzalah France sur Facebook et Instagram.
+          </p>
+          <div class="blog-filters">
+            <span class="blog-filter active">Tous</span>
+            <span class="blog-filter">Articles</span>
+            <span class="blog-filter">Interventions</span>
+            <span class="blog-filter">Facebook</span>
+            <span class="blog-filter">Instagram</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">À la une</span>
+          <h2 class="section-title">Mettre en avant vos contenus les plus importants.</h2>
+          <p class="section-description">
+            Utilisez cette section pour afficher vos derniers posts marquants, vos interventions majeures ou vos articles clés du moment.
+          </p>
+        </div>
+
+        <div class="social-highlight">
+          <article class="social-card">
+            <img src="assets/blog-featured-1.jpg" alt="Publication Facebook United Hatzalah">
+            <div class="social-card-content">
+              <span class="social-badge facebook">Facebook</span>
+              <h3>Exemple de publication importante sur une intervention ou une campagne.</h3>
+              <p>
+                Cette carte peut mettre en avant une publication Facebook forte : intervention, campagne d’urgence, collecte, ou contenu institutionnel important.
+              </p>
+              <a href="https://www.facebook.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Voir sur Facebook</a>
+            </div>
+          </article>
+
+          <article class="social-card">
+            <img src="assets/blog-featured-2.jpg" alt="Publication Instagram United Hatzalah">
+            <div class="social-card-content">
+              <span class="social-badge instagram">Instagram</span>
+              <h3>Exemple de contenu Instagram visuel, émotionnel ou terrain.</h3>
+              <p>
+                Cette carte peut mettre en avant un visuel ou une vidéo Instagram marquante, avec un lien direct vers la publication d’origine.
+              </p>
+              <a href="https://www.instagram.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Voir sur Instagram</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Articles & publications</span>
+          <h2 class="section-title">Une page pensée pour accueillir vos contenus dans la durée.</h2>
+          <p class="section-description">
+            Vous pouvez y publier des articles, résumés d’interventions, recaps d’événements, posts issus des réseaux sociaux ou actualités importantes de l’organisation.
+          </p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-card-media">
+              <img src="assets/blog-1.jpg" alt="Article United Hatzalah 1">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span>Article</span>
+                <span>10 avril 2026</span>
+              </div>
+              <h3>Titre de votre article ou actualité importante.</h3>
+              <p>
+                Résumé court de l’article. Ici vous pouvez présenter une intervention, une campagne de dons, une visite importante ou une actualité institutionnelle.
+              </p>
+              <a href="#" class="btn btn-secondary">Lire l’article</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-media">
+              <img src="assets/blog-2.jpg" alt="Article United Hatzalah 2">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span>Intervention</span>
+                <span>8 avril 2026</span>
+              </div>
+              <h3>Exemple de retour sur une intervention marquante.</h3>
+              <p>
+                Cette carte peut être utilisée pour raconter une intervention, un contexte d’urgence ou un sauvetage, avec une logique éditoriale plus narrative.
+              </p>
+              <a href="#" class="btn btn-secondary">Lire l’article</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-media">
+              <img src="assets/blog-3.jpg" alt="Article United Hatzalah 3">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span>Actualité</span>
+                <span>5 avril 2026</span>
+              </div>
+              <h3>Exemple de post institutionnel ou de message important.</h3>
+              <p>
+                Vous pouvez ici relayer des informations plus institutionnelles : lancement, événement, nouveau projet, mission, bilan ou opération spéciale.
+              </p>
+              <a href="#" class="btn btn-secondary">Lire l’article</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-media">
+              <img src="assets/blog-4.jpg" alt="Article United Hatzalah 4">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span>Facebook</span>
+                <span>3 avril 2026</span>
+              </div>
+              <h3>Exemple de post Facebook relayé sur le site.</h3>
+              <p>
+                Cette carte peut reprendre un texte, une image et un lien vers la publication Facebook d’origine.
+              </p>
+              <a href="https://www.facebook.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Voir le post</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-media">
+              <img src="assets/blog-5.jpg" alt="Article United Hatzalah 5">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span>Instagram</span>
+                <span>1 avril 2026</span>
+              </div>
+              <h3>Exemple de post Instagram relayé sur le site.</h3>
+              <p>
+                Ce bloc peut servir à renvoyer vers une publication Instagram forte, avec une logique très visuelle et plus sociale.
+              </p>
+              <a href="https://www.instagram.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Voir le post</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-media">
+              <img src="assets/blog-6.jpg" alt="Article United Hatzalah 6">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span>Campagne</span>
+                <span>28 mars 2026</span>
+              </div>
+              <h3>Exemple de campagne de dons ou d’action spéciale.</h3>
+              <p>
+                Cette carte peut mettre en avant une page de campagne, un projet urgent ou un contenu lié à une collecte de dons.
+              </p>
+              <a href="don.html" class="btn btn-primary">Soutenir la campagne</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container section-head">
+        <span class="eyebrow eyebrow-dark">Suivre l’actualité</span>
+        <h2 class="section-title">Retrouvez-nous aussi sur nos réseaux sociaux.</h2>
+        <p class="section-description">
+          Facebook et Instagram permettent de suivre en temps réel les interventions, les messages clés, les campagnes de dons et les contenus visuels les plus marquants de United Hatzalah France.
+        </p>
+        <div class="button-row" style="justify-content: center; margin-top: 30px;">
+          <a href="https://www.facebook.com/" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <img src="assets/logo-hatzalah.png" alt="Logo United Hatzalah" class="brand-logo">
+            <div class="brand-text">
+              <small style="color: rgba(255,255,255,0.5);">United Hatzalah France</small>
+              <strong style="color: white;">Sauver des vies en 90 secondes</strong>
+            </div>
+          </a>
+          <p style="margin-top: 16px;">
+            United Hatzalah intervient en quelques secondes pour apporter les premiers soins et sauver des vies en Israël.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Accueil</a>
+            <a href="don.html">Faire un don</a>
+            <a href="interventions.html">Nos moyens d’intervention</a>
+            <a href="impact.html">Notre impact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <div class="footer-links">
+            <a href="apropos.html">À propos</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suivre United Hatzalah</h4>
+          <div class="button-row" style="margin-top: 8px;">
+            <a href="https://www.facebook.com/" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © United Hatzalah France — Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
