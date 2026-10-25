@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /donateurs.html
+Sitemap: https://hatzalahfr.vercel.app/sitemap.xml
