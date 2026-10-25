@@ -22,9 +22,9 @@
         </div>
       </a>
 
-      <nav class="main-nav">
-        <a href="index.html" class="is-active">Accueil</a>
-        <a href="interventions.html">Nos moyens d'intervention</a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html" class="is-active" aria-current="page">Accueil</a>
+        <a href="interventions.html">Nos moyens d’intervention</a>
         <a href="impact.html">Notre impact</a>
         <a href="apropos.html">À propos</a>
         <a href="blog.html">Blog</a>
@@ -50,6 +50,8 @@
         color: white;
       }
 
+      .hero-home-full .hero-motion-fallback { display: none; }
+      @media (prefers-reduced-motion: reduce) { .hero-home-full .hero-bg video { display: none; } .hero-home-full .hero-motion-fallback { display: block; } }
       .hero-home-full .hero-bg {
         position: absolute;
         inset: 0;
@@ -153,7 +155,7 @@
 
     <section class="hero-home-full">
       <div class="hero-bg">
-        <img src="hero-home.gif" alt="Intervention United Hatzalah">
+        <video autoplay muted loop playsinline preload="metadata" poster="hero-home.gif" aria-label="Images vidéo des interventions de United Hatzalah"><source src="hatzalah-video.mp4" type="video/mp4"></video><img class="hero-motion-fallback" src="hero-home.gif" alt="Secouristes United Hatzalah sur le terrain">
       </div>
       <div class="hero-overlay"></div>
       <div class="container hero-inner">
