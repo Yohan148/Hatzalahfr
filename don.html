@@ -8,8 +8,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <link rel="stylesheet" href="style.css?v=20261025-menu-final">
+<style id="site-nav-stable">
+/* Style autonome du menu : même avec un ancien CSS en cache. */
+.site-header .header-inner{display:flex!important;align-items:center!important;flex-wrap:nowrap!important;gap:14px!important}
+.site-header .header-cta{flex:0 0 auto!important;margin-left:0!important;width:auto!important}
+.site-header .header-cta .btn{white-space:nowrap!important}
+.site-header .main-nav{min-width:0!important;gap:12px!important;margin-left:auto!important;flex:0 1 auto!important}
+.site-header .main-nav a{white-space:nowrap!important}
+.site-header .site-more-menu{position:relative!important;display:block!important;flex:0 0 46px!important;z-index:1100!important}
+.site-header .site-more-menu>summary{list-style:none!important;display:flex!important;align-items:center!important;justify-content:center!important;min-width:46px!important;width:46px!important;height:46px!important;padding:0!important;border:1px solid #cbd5e1!important;border-radius:12px!important;background:#fff!important;cursor:pointer!important;font-size:0!important}
+.site-header .site-more-menu>summary::-webkit-details-marker{display:none!important}
+.site-header .site-menu-label{display:none!important}
+.site-header .site-menu-bars{display:flex!important;flex-direction:column!important;gap:4px!important}
+.site-header .site-menu-bars i{display:block!important;width:21px!important;height:2.5px!important;border-radius:3px!important;background:#0f172a!important}
+.site-header .site-more-menu:not([open])>.site-menu-panel{display:none!important}
+.site-header .site-more-menu[open]>.site-menu-panel{position:absolute!important;display:flex!important;flex-direction:column!important;right:0!important;left:auto!important;top:calc(100% + 12px)!important;width:min(360px,calc(100vw - 24px))!important;padding:14px!important;box-sizing:border-box!important;background:#fff!important;border:1px solid #e2e8f0!important;border-radius:16px!important;box-shadow:0 24px 60px rgba(15,23,42,.2)!important;z-index:1200!important;max-height:70vh!important;overflow-y:auto!important;gap:2px!important}
+.site-header .site-menu-panel a{display:block!important;padding:12px 14px!important;border-radius:9px!important;white-space:normal!important;color:#1e293b!important;font-size:14px!important;line-height:1.4!important;font-weight:650!important}
+.site-header .site-menu-panel a:hover{background:#fff7ed!important;color:#c2410c!important}
+.site-header .site-menu-caption{display:block!important;color:#ea580c!important;font-size:11px!important;padding:7px 12px!important;letter-spacing:.1em!important;font-weight:800!important}
+.site-header .site-menu-divider{display:block!important;border-top:1px solid #e2e8f0!important;margin:7px 0!important}
+.site-header .site-menu-mobile{display:none!important}
+@media(max-width:1100px){.site-header .main-nav{display:none!important}.site-header .header-cta{margin-left:auto!important}.site-header .site-menu-mobile{display:contents!important}}
+@media(max-width:780px){.site-header .header-inner{padding:12px 16px!important;gap:8px!important}.site-header .brand{width:auto!important;min-width:0!important;flex:1 1 auto!important}.site-header .brand-logo{width:42px!important;height:42px!important}.site-header .brand-text strong{font-size:11px!important}.site-header .header-cta .btn{padding:10px!important;font-size:11px!important}}
+@media(max-width:430px){.site-header .brand-text strong{display:none!important}}
+</style></head>
 <body>
 
   <header class="site-header">
@@ -27,7 +50,7 @@
 <a href="interventions.html">Nos moyens d’intervention</a>
 <a href="impact.html">Notre impact</a>
 <a href="blog.html">Blog</a>
-<a href="contact.html">Contact</a>
+
 </nav>
 
       <div class="header-cta">
